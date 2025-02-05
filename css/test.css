@@ -1,0 +1,413 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #fae1dd;
+}
+
+.container {
+  position: relative;
+}
+
+.valentines {
+  position: relative;
+  top: 50px;
+  cursor: pointer;
+  animation: up 3s linear infinite;
+}
+
+.envelope {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  background-color: #f4978e;
+}
+
+.envelope::before {
+  background-color: #f08080;
+  content: "";
+  position: absolute;
+  width: 212px;
+  height: 212px;
+  transform: rotate(45deg);
+  top: -105px;
+  left: 44px;
+  border-radius: 30px 0 0 0;
+}
+
+.card {
+  position: absolute;
+  background-color: #eae2b7;
+  width: 270px;
+  height: 170px;
+  top: 5px;
+  left: 15px;
+  box-shadow: -5px -5px 100px rgba(0, 0, 0, 0.4);
+}
+
+.card:before {
+  content: "";
+  position: absolute;
+  border: 3px solid #003049;
+  border-style: dotted;
+  width: 240px;
+  height: 140px;
+  left: 12px;
+  top: 12px;
+}
+
+.text {
+  position: absolute;
+  font-family: "Brush Script MT", cursive;
+  font-size: 28px;
+  text-align: center;
+  line-height: 25px;
+  top: 19px;
+  left: 85px;
+  color: #003049;
+}
+
+.heart {
+  background-color: #d62828;
+  display: inline-block;
+  height: 30px;
+  margin: 0 10px;
+  position: absolute;
+  top: 90px;
+  left: 30px;
+  transform: rotate(-45deg);
+  width: 30px;
+}
+
+.heart:before,
+.heart:after {
+  content: "";
+  background-color: #d62828;
+  border-radius: 50%;
+  height: 30px;
+  position: absolute;
+  width: 30px;
+}
+
+.heart:before {
+  top: -15px;
+  left: 0;
+}
+
+.heart:after {
+  left: 15px;
+  top: 0;
+}
+
+.front {
+  position: absolute;
+  border-right: 180px solid #f4978e;
+  border-top: 95px solid transparent;
+  border-bottom: 100px solid transparent;
+  left: 120px;
+  top: 5px;
+  width: 0;
+  height: 0;
+  z-index: 10;
+}
+
+.front:before {
+  position: absolute;
+  content: "";
+  border-left: 300px solid #f8ad9d;
+  border-top: 195px solid transparent;
+  left: -120px;
+  top: -95px;
+  width: 0;
+  height: 0;
+}
+
+.shadow {
+  position: absolute;
+  width: 330px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.3);
+  bottom: 150px;
+  animation: scale 3s linear infinite;
+  z-index: -1;
+}
+
+.buttons {
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 10px 50px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.yes {
+  background-color: #28a745;
+  color: white;
+  animation: up1 500ms linear infinite;
+}
+.no {
+  background-color: #dc3545;
+  color: white;
+}
+
+/* ----------HEARTS---------- */
+
+.hearts {
+  position: absolute;
+}
+
+.one,
+.two,
+.three,
+.four,
+.five {
+  background-color: red;
+  display: inline-block;
+  height: 10px;
+  margin: 0 10px;
+  position: relative;
+  transform: rotate(-45deg);
+  width: 10px;
+  top: 60px;
+}
+
+.one:before,
+.one:after,
+.two:before,
+.two:after,
+.three:before,
+.three:after,
+.four:before,
+.four:after,
+.five:before,
+.five:after {
+  content: "";
+  background-color: red;
+  border-radius: 50%;
+  height: 10px;
+  position: absolute;
+  width: 10px;
+}
+
+.one:before,
+.two:before,
+.three:before,
+.four:before,
+.five:before {
+  top: -5px;
+  left: 0;
+}
+
+.one:after,
+.two:after,
+.three:after,
+.four:after,
+.five:after {
+  left: 5px;
+  top: 0;
+}
+
+.one {
+  left: 10px;
+  animation: heart 1s ease-out infinite;
+}
+
+.two {
+  left: 30px;
+  animation: heart 2s ease-out infinite;
+}
+
+.three {
+  left: 50px;
+  animation: heart 1.5s ease-out infinite;
+}
+
+.four {
+  left: 70px;
+  animation: heart 2.3s ease-out infinite;
+}
+
+.five {
+  left: 90px;
+  animation: heart 1.7s ease-out infinite;
+}
+
+/* -----------ANIMATION---------- */
+
+@keyframes up {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+}
+
+@keyframes up1 {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-15px);
+  }
+}
+
+@keyframes scale {
+  0%,
+  100% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(0.85);
+  }
+}
+
+@keyframes heart {
+  0% {
+    transform: translateY(0) rotate(-45deg) scale(0.3);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-150px) rotate(-45deg) scale(1.3);
+    opacity: 0.5;
+  }
+}
+
+/* Fondo con imágenes en collage */
+.background-effects {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilo de las imágenes */
+.blurred-image {
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  filter: blur(1px);
+  opacity: 0.5;
+  transform: rotate(var(--rotation));
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Tamaños grandes para abarcar más */
+.img1,
+.img6,
+.img3,
+.img9 {
+  width: 20rem;
+  height: 20rem;
+}
+
+.img5,
+.img7,
+.img8 {
+  width: 14rem;
+  height: 14rem;
+}
+
+.img2 {
+  width: 25rem;
+  height: 25rem;
+}
+.img4 {
+  width: 30rem;
+  height: 30rem;
+}
+
+/* Distribución de imágenes con rutas corregidas */
+.img1 {
+  background-image: url("../img/wa1.jpg");
+  top: 2%;
+  left: 2%;
+  --rotation: -10deg;
+}
+.img2 {
+  background-image: url("../img/wa2.jpg");
+  top: 5%;
+  right: 14%;
+  --rotation: 8deg;
+}
+
+.img3 {
+  background-image: url("../img/wa3.jpg");
+  top: 45%;
+  left: 5%;
+  --rotation: -15deg;
+}
+
+.img4 {
+  background-image: url("../img/wa4.jpg");
+  top: 8%;
+  left: 25%;
+  --rotation: 12deg;
+}
+
+.img5 {
+  background-image: url("../img/wa5.jpg");
+  bottom: 2%;
+  left: 30%;
+  --rotation: -7deg;
+}
+
+.img6 {
+  background-image: url("../img/wa6.jpg");
+  bottom: 5%;
+  right: 28%;
+  --rotation: 20deg;
+}
+
+.img7 {
+  background-image: url("../img/wa7.jpg");
+  top: 5%;
+  right: -2%;
+  --rotation: -5deg;
+}
+
+.img8 {
+  background-image: url("../img/wa8.jpg");
+  bottom: 3%;
+  right: 11%;
+  --rotatn: 25deg;
+}
+
+.img9 {
+  background-image: url("../img/wa9.jpg");
+  bottom: 24%;
+  right: -5%;
+  --rotation: -12deg;
+}
+
+/* Partículas flotantes */
+/* Contenedor de partículas */
+#particles-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
