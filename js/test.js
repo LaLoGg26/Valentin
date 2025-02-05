@@ -38,9 +38,9 @@ $(document).ready(function () {
     "No",
     "¿Segura?",
     "¿De verdad?",
-    "¿Estás segura?",
-    "Piensa bien",
-    "Última oportunidad",
+    "🥺",
+    "Ultima Oportunidad",
+    "",
   ];
 
   $(".container").click(function () {
