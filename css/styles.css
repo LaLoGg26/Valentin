@@ -12,7 +12,7 @@ body {
   background: linear-gradient(135deg, #ff5e78, #ff2d55);
   color: white;
   text-align: center;
-  padding: 2rem;
+  padding: 0.2rem;
   font-size: 1.8rem;
   height: 20vh;
   display: flex;
@@ -76,7 +76,7 @@ body {
   justify-content: center;
   text-align: center;
   font-size: 1.5rem;
-  padding: 2rem;
+  padding: 1.5rem;
   font-weight: bold;
   background: white;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
@@ -86,10 +86,12 @@ body {
 }
 
 .derecha h2 {
+  color: #ff5e78;
   padding: 20px 20px;
 }
 
 .derecha p {
+  font-size: 1.3rem;
   text-align: left;
   padding: 0 10rem;
 }
@@ -149,5 +151,63 @@ body {
   }
   100% {
     transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .encabezado {
+    height: 20vh;
+    width: 120%;
+    left: -30px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .contenido {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .izquierda {
+    width: 100%;
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  .video-superior,
+  .video-inferior {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .video-inferior video {
+    width: 100%;
+    height: auto;
+  }
+
+  .derecha {
+    width: 100%;
+    margin: 1rem;
+    padding: 1rem;
+    font-size: 1.2rem;
+  }
+
+  .derecha p {
+    padding: 0 1rem;
+    font-size: 1rem;
+  }
+
+  .boton-amor {
+    width: 80%;
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+
+  .encabezado {
+    font-size: 1.5rem;
+    height: auto;
+    padding: 1rem;
   }
 }

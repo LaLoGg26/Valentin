@@ -539,3 +539,66 @@ body {
     font-size: 0.9rem;
   }
 }
+
+/* Estilos de la ventana modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content h2 {
+  margin-bottom: 1rem;
+  color: #d62828;
+}
+
+.modal-content p {
+  font-size: 1rem;
+  color: #333;
+}
+
+.download-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 10px 20px;
+  background-color: #e761bd;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.download-btn:hover {
+  background-color: #d62828;
+}
+
+/* Botón de cerrar */
+.close {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #333;
+}
+
+.close:hover {
+  color: #d62828;
+}
